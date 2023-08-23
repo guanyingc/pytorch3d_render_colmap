@@ -328,6 +328,6 @@ def read_cameras_from_sparse(sparse_path):
 
 if __name__ == '__main__':
     #main()
-    sparse_path = 'data/toy_sparse/0'
+    sparse_path = 'data_colmap/sparse'
     cameras = read_cameras_from_sparse(sparse_path)
     print(cameras)

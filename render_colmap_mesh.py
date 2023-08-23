@@ -7,7 +7,6 @@
 import argparse
 import os
 import sys
-import torch
 import cv2
 import numpy as np
 from PIL import Image
@@ -15,6 +14,7 @@ from PIL import Image
 from IPython.core import ultratb
 sys.excepthook = ultratb.FormattedTB(call_pdb=True)
 
+import torch
 import pytorch3d
 # Util function for loading meshes
 from pytorch3d.io import load_objs_as_meshes, load_obj
