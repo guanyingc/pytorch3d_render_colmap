@@ -27,7 +27,7 @@ The `sparse/` and `images/` are from the dense reconstruction stage of colmap.
 </p>
 
 ### Synthetic Data
-The synthetic cow ued in the pytorch3d document.
+The synthetic cow model used in the pytorch3d document.
 
 <p align="center">
      <img src='results/cow_0000_cat.jpg' height="500" >
@@ -35,7 +35,7 @@ The synthetic cow ued in the pytorch3d document.
 
 ## Get Started
 ```
-# Render depth and normal map of a reconstructed mesh using colmap camera
+# Render depth and normal map of a reconstructed mesh using a colmap camera
 python render_colmap_mesh.py
 ```
 
