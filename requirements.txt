@@ -1,3 +1,7 @@
-pytorch3d
+# torch
+# pytorch3d
 opencv-python
+pillow
+IPython
+
 
