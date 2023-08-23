@@ -21,8 +21,13 @@ data_colmap/
     └── points3D.bin
 
 The `sparse/` and `images/` are from the dense reconstruction stage of colmap.
+
 ```
-<p align="center">
+
+https://github.com/guanyingc/pytorch3d_render_colmap/assets/8651158/c66fa0c9-820e-4973-8de0-fa30b3cad540
+
+
+<p>
      <img src='results/meshed-delaunay_0000_cat.jpg' height="500" >
 </p>
 
