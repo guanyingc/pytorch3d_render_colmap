@@ -49,4 +49,5 @@ python render_colmap_mesh.py
 python render_colmap_mesh.py --debug
 ```
 
-Can also see the [Jupyter Notebook](./render_colmap_mesh.ipynb).
+Can also see the [知乎文章：PyTorch3D渲染COLMAP重建的物体](https://zhuanlan.zhihu.com/p/651937759) and [Jupyter Notebook](./render_colmap_mesh.ipynb).
+

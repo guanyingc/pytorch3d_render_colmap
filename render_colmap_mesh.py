@@ -178,29 +178,29 @@ def setup_renderer(args, camera):
         faces_per_pixel=1, 
     )
 
-lights = AmbientLights(device=device)
-#lights = PointLights(device=device, location=[[0.0, 0.0, -3.0]])
+    lights = AmbientLights(device=device)
+    #lights = PointLights(device=device, location=[[0.0, 0.0, -3.0]])
 
-rasterizer = MeshRasterizer(
-        cameras=cameras, 
-        raster_settings=raster_settings
+    rasterizer = MeshRasterizer(
+            cameras=cameras,
+            raster_settings=raster_settings
+        )
+
+    # Create a Phong renderer by composing a rasterizer and a shader.
+    if args.shader == 'mask':
+        shader = pytorch3d.renderer.SoftSilhouetteShader()
+        print('Use mask SoftSilhouetteShader shader')
+    else:
+        shader = SoftPhongShader(
+            device=device,
+            cameras=cameras,
+            lights=lights
+        )
+
+    renderer = MeshRendererWithFragments(
+        rasterizer = rasterizer,
+        shader=shader
     )
-
-# Create a Phong renderer by composing a rasterizer and a shader.
-if args.shader == 'mask':
-    shader = pytorch3d.renderer.SoftSilhouetteShader()
-    print('Use mask SoftSilhouetteShader shader')
-else:
-    shader = SoftPhongShader(
-        device=device, 
-        cameras=cameras,
-        lights=lights
-    )
-
-renderer = MeshRendererWithFragments(
-    rasterizer = rasterizer,
-    shader=shader
-)
 
     render_setup =  {'cameras': cameras, 'raster_settings': raster_settings, 'lights': lights,
             'rasterizer': rasterizer, 'renderer': renderer}
